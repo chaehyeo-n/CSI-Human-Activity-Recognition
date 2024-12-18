@@ -6,7 +6,7 @@ def train_valid_split(numpy_tuple, train_portion, seed):
     where x_train and y_train are shuffled randomly.
 
     Args:
-        numpy_tuple  : tuple of numpy array: (x_sitdown, x_standup)
+        numpy_tuple  : tuple of numpy array: (x_bed, x_fall, x_pickup, x_run, x_sitdown, x_standup, x_walk)
         train_portion: float, range (0,1)
         seed         : random seed
     """

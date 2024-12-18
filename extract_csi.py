@@ -2,7 +2,7 @@ from preprocessing.extract_csi_and_label import extract_csi_by_label
 
 def extract_csi(raw_folder, labels, win_len, thrshd, step, save=False):
     """
-    Return List of Array in the format of [X_label1, y_label1, X_label2, y_label2]
+    Return List of Array in the format of [X_label1, y_label1, X_label2, y_label2 ... x_label7, y_label7]
     Args:
         raw_folder:  the folder path of raw CSI csv files, input_* annotation_*
         labels    :  all the labels existing in the folder

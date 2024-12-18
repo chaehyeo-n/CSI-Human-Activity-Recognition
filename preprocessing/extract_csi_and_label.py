@@ -9,7 +9,7 @@ def extract_csi_by_label(raw_folder, label, labels, win_len, thrshd, step, save=
     Args:
         raw_folder: The path of Dataset folder
         label    :  str, could be one of labels
-        labels   :  list of str, ['sitdown', 'standup']
+        labels   :  list of str, ['bed', 'fall', 'pickup', 'run', 'sitdown', 'standup', 'walk']
         save     :  boolean, choose whether save the numpy array 
         win_len  :  integer, window length
         thrshd   :  float,  determine if an activity is strong enough inside a window
@@ -19,7 +19,7 @@ def extract_csi_by_label(raw_folder, label, labels, win_len, thrshd, step, save=
     # validate the label
     label = label.lower()
     if not label in labels:
-        raise ValueError("The label {} should be among 'sitdown','standup'".format(labels))
+        raise ValueError("The label {} should be among 'bed', 'fall', 'pickup', 'run', 'sitdown', 'standup', 'walk'".format(labels))
     
     data_path_pattern = os.path.join(raw_folder, 'input_*' + label + '*.csv')
     input_csv_files = sorted(glob.glob(data_path_pattern))
